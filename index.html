@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Letter Find</title>
+</head>
+<body>
+    <div id="help-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="heading">Instructions</p>
+    <ol>
+        <li>Input all the valid letters in the "All letters" field</li>
+        <li>Select the letter that needs to be found</li>
+        <li>Select how many instances of the correct letter will appear on the page</li>
+        <li>Check "Allow lowercase" in order to have lowercase letters appear as well</li>
+        <li>Click "Refresh" to generate a new page with the current settings</li>
+        <li>Click the "Print" button to print the page or save it as a PDF</li>
+    </ol>
+    <p class="heading">Tips</p>
+    <ol>
+        <li>You do not need to use all the letters of the alphabet in order to generate a page</li>
+        <li>You can input a letter multiple times in order to make it more likely to appear on the page</li>
+        <li>You can click on the letters on the page to fill the circles with color. Click the letter again to remove the fill</li>
+        <li>If you wish to print the page with the fills visible, go to "Print", expand the "More settings" menu and check "Background graphics"</li>
+    </ol>
+  </div>
+    </div>
+    <div class="floating-menu">
+        <div class="menu-title">Settings</div>
+        <div class="menu-row">
+            <label for="all-letters">All letters:</label><br>
+            <textarea id="all-letters" name="all-letters" rows="4" cols="32" spellcheck="false">ABCDEFGHIJKLMNOPQRSTUVYZ</textarea>
+        </div>
+        <div class="menu-row grid">
+            <label for="find-letter" class="half-width">Find letter:</label>
+            <input type="text "class="find-letter half-width" id="find-letter" name="find-letter" maxlength="1" pattern="[a-zA-Z]" value="C">
+        </div>
+        <div class="menu-row grid">
+            <label for="correct-letters" class="half-width">Correct letters:</label>
+            <input type="number" class="correct-letters half-width" id="correct-letters" name="correct-letters" min="1" max="20" pattern="\d{1,2}" maxLength="2" value="6">
+        </div>
+        <div class="menu-row">
+            <input type="checkbox" name="allow-lowercase" id="allow-lowercase"><label for="allow-lowercase">Allow lowercase</label>
+        </div>
+        
+        <div class="menu-row buttons">
+            <button id="refresh"><span><i class="material-icons small-icon button-icon">refresh</i>Refresh</span></button>
+            <button id="help"><span><i class="material-icons small-icon button-icon">help_outline</i>Help</span></button>
+            <button id="print"><span><i class="material-icons small-icon button-icon">print</i>Print</span></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="large-letter" id="large-letter"></div>
+        <div class="letters-container">
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+            <div class="circle-border"></div>
+        </div>
+    </div>
+</body>
+</html>
